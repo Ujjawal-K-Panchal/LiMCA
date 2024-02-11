@@ -1,1 +1,6 @@
+#data content.
 data/
+
+#virtual environments & caches.
+venv*
+__pycache__
