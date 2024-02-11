@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore")
 datafolder = Path("data")
 if not os.path.exists(datafolder):
     os.makedirs(datafolder)
-    
+
 lc_savefile = datafolder  / "leetcode.csv"
 
 
@@ -92,20 +92,28 @@ def getLCQuestions() -> pd.DataFrame:
                 print(f"Couldn't get question: {titleSlug}")
     return qdf
 
-
 def saveLCQuestions(questions: pd.DataFrame, filename: Path | str) -> None:
     questions.to_csv(filename)
     return
-    
-if __name__ == "__main__":
+
+def downloadLCQuestions(savefile: str = lc_savefile):
     #1. get all leetcode questions.
     questions = getLCQuestions()
 
-    #2. filter only hard questions.
-    print(questions)
+    #2. save questions.
+    saveLCQuestions(questions, savefile)
+    return
+
+if __name__ == "__main__":
+    #1. download LeetCode questions.
+    if os.path.exists(lc_savefile):
+        print(f"LeetCode already downloaded.")
+    else:
+        downloadLCQuestions()
+    #2. download Refactory questions.
+        ...
+
     
-    #3. save questions.
-    saveLCQuestions(questions, lc_savefile)
 
         
     
