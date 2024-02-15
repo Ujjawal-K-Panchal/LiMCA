@@ -4,3 +4,4 @@ data/
 #virtual environments & caches.
 venv*
 __pycache__
+.ipynb_checkpoints
