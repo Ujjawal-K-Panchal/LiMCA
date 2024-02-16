@@ -1,6 +1,7 @@
 #data content.
 data/
-
+models/
+.vscode
 #virtual environments & caches.
 venv*
 __pycache__
