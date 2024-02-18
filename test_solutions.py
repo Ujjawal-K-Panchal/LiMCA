@@ -1,5 +1,9 @@
 import os
 
+base_prompt = "Only return code with no other text. You must maintain as much of the original code as possible and cannot perform large modifications. Fix the bugs in the following problem "
+refactory_problems = ["Sequential Search", "Unique Days/months", "Remove Duplicates", "Sort Tuples", "Top-k"]
+llm_list = ["GPT","Phi", "Llama"]
+
 def read_file(filename):
     with open(filename, 'r') as file:
         return file.read()
@@ -11,6 +15,14 @@ def compare_results(result, expected_result):
     return str(result) == str(expected_result).strip()
 
 if __name__ == "__main__":
+    llm_number = input("Select LLM with Integer Input: 1 for GPT 3.5 | 2 for Code-Phi | 3 for Code-Llama")
+    problem_number = input("Which Refactory Problem is being tested?")
+    iteration=1
+
+
+    prompt=base_prompt + refactory_problems[problem_number-1]
+    directory_name = "refactory_q"+str(problem_number)+"/"+llm_list[llm_number-1]+"_sol_iter"+iteration
+
     function_definition_folder = "refactory_q1/q1_GPT_sol_iter_1"
     function_defs = []
     for filename in os.listdir(function_definition_folder):
