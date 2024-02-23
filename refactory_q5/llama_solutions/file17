@@ -1,0 +1,3 @@
+#'Write a function that takes a list of integers and returns the sum of the last k elements in the list.
+def sum_of_last_k(lst,k):
+    return sum(lst[-k:])

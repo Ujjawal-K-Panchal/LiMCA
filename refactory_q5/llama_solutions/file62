@@ -1,0 +1,6 @@
+#'Write a function that takes a list of integers and returns the product of the integers.
+def product_list(lst):
+    product = 1
+    for i in lst:
+        product *= i
+    return product

@@ -1,0 +1,8 @@
+#'Write a function that takes a list of integers and returns the sum of the first k elements in the list.
+def sum_k(lst, k):
+    sum = 0
+    n = 1
+    while n <= k:
+        sum += lst[n-1]
+        n += 1
+    return sum

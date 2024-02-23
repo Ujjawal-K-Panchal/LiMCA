@@ -1,0 +1,11 @@
+#'Write a function that takes a list of numbers and returns the sum of the first k smallest numbers in the list.
+def sum_of_bottom_k(lst, k):
+    new_lst = []
+    while lst:
+        smallest = lst[0]
+        for numbers in lst:
+            if numbers < smallest:
+                smallest = numbers
+        new_lst.append(numbers)
+        lst.remove(numbers)
+    return sum(new_lst[:k])

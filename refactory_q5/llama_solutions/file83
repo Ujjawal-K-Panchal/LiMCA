@@ -1,0 +1,8 @@
+#'Write a function that takes a list of integers and returns a list of the integers in the list that are divisible by 3.
+def divisible_by_3(lst):
+    new_lst = []
+    for i in lst:
+        if i % 3 == 0:
+            new_lst.append(i)
+    return new_lst
+    pass

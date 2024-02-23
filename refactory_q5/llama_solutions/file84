@@ -1,0 +1,4 @@
+#'Write a function that takes a list of integers and returns the product of the integers.
+def product_list(lst):
+    return reduce(lambda x, y: x*y, lst)
+    pass

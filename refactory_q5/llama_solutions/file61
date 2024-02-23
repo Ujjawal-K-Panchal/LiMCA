@@ -1,0 +1,7 @@
+#'Write a function that takes a list of integers and returns a list of the first 3 odd numbers in the list.
+def first_3_odd(lst):
+    new_lst=[]
+    for i in lst:
+        if i%2!=0:
+            new_lst.append(i)
+    return new_lst[:3]

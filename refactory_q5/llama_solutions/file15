@@ -1,0 +1,12 @@
+#'Write a function that takes a list of integers and returns the sum of the last k elements in the list.
+def sum_k_last(lst, k):
+    if lst == []:
+        return 0
+    else:
+        final = 0
+        while lst:
+            element = lst.pop()
+            final += element
+            if len(lst) == k:
+                break
+        return final

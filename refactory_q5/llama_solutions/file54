@@ -1,0 +1,12 @@
+#'Write a function that takes a list of integers and returns a list of the integers in the list, sorted in descending order.
+def sort_descending(lst):
+    lst_res = lst
+    sort = []
+    while lst_res:
+        largest = lst_res[0]
+        for elements in lst_res:
+            if element > largest:
+                largest = element
+        lst_res.remove(largest)
+        sort.append(largest)
+    return sort[:k]

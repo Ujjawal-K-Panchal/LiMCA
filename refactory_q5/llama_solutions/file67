@@ -1,0 +1,6 @@
+#'Write a function that takes a list of integers and returns the product of the first k elements in the list.
+def prod_k(lst, k):
+    prod = 1
+    for i in range(k):
+        prod *= lst[i]
+    return prod

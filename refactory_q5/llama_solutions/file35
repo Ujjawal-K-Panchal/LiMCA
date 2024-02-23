@@ -1,0 +1,10 @@
+
+#'Write a function that takes a list of integers and returns a list of the first k largest elements.
+#'For example, given the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 4, you should return [10, 9, 8, 7].
+#'Given the list [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] and k = 4, you should return [10, 9, 8, 7].
+#'Given the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 10, you should return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+#'Given the list [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] and k = 10, you should return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+#'Given the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 1, you should return [10].
+#'Given the list [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] and k = 1, you should return [1].
+#'Given the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 5, you should return [10, 9, 8, 7, 6].
+#'Given the list [10, 9, 8, 7, 6, 5, 4, 3, 

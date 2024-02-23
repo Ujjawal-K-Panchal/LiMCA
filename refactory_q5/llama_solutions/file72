@@ -1,0 +1,4 @@
+#'Write a function that takes a list of integers and returns a list of the integers in the list, sorted in descending order.
+def sort_descending(lst):
+    lst.sort(reverse=True)
+    return lst

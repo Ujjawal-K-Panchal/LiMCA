@@ -1,0 +1,9 @@
+#'Write a function that takes a list of integers and returns a list of the integers in the list that are not in the top k.
+def top_k(lst, k):
+    new = []
+    while len(lst) > len(lst) - k:
+        top = max(lst) 
+        new.append(top)
+        lst.remove(top)
+        
+    return new

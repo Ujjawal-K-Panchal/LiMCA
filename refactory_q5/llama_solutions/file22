@@ -1,0 +1,6 @@
+#'Write a function that takes a list of integers and returns the sum of the last k integers in the list.
+def sum_of_last_k(lst, k):
+    r=0
+    for qwerty in range(len(lst)-k,len(lst)):
+        r+=lst[qwerty]
+    return r

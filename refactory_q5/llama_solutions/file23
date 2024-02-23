@@ -1,0 +1,6 @@
+#'Write a function that takes a list of integers and returns the sum of the integers.
+def sum_list(lst):
+    sum = 0
+    for item in lst:
+        sum += item
+    return sum
