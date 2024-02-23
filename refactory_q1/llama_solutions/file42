@@ -1,0 +1,6 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    for item in seq:
+        if x < item:
+            return index(item)
+    return len(seq)

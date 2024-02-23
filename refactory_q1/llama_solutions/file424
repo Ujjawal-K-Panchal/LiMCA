@@ -1,0 +1,15 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    """ Takes in a value x and a sorted sequence seq, and returns the
+    position that x should go to such that the sequence remains sorted """
+    if seq == []:
+        return 0
+    elif type(seq) == tuple:
+        new_seq = list(seq)
+        sort = []
+        for i in range(len(new_seq)):
+            if max(new_seq) < x:
+                sort.extend(new_seq)
+                sort.append(x)
+            elif new_seq[i] >=x: 
+                sort

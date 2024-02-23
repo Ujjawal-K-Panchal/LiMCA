@@ -1,0 +1,12 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    if type(seq) == tuple:
+        seq = list(seq)
+        seq.append(x)
+        sorted(seq)
+        return seq.index(x)
+        
+    for i in range(len(seq)):
+        if seq[i] == x:
+            return i
+    return -1

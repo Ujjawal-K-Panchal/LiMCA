@@ -1,0 +1,7 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    l=len(seq)
+    for i in range(l):
+        if x<=seq[i]:
+            break
+    return i

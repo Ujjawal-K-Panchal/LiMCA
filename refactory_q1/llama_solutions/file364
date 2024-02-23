@@ -1,0 +1,7 @@
+    for number in enumerated_list:
+        if x <= number[1]:
+            res = number[0]
+            break
+        else:
+            res = len(seq)
+    return res

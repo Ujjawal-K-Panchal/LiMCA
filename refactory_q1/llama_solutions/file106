@@ -1,0 +1,15 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    if seq == () or seq == []:
+        return 0
+    else:
+        count = 0
+        for i in range (0, len(seq)):
+            if seq[i] > x:
+                return i
+            elif seq[-1] < x:
+                return len(seq)
+            else:
+                count += 1
+                if seq[i] == x:
+                    return i

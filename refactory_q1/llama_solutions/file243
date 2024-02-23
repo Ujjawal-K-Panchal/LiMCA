@@ -1,0 +1,5 @@
+    for i in seq:
+        if x < i:
+            return counter
+        else:
+            counter += 1

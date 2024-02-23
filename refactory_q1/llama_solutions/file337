@@ -1,0 +1,71 @@
+   elif type(seq) == str:
+        str = ''
+        for i in seq:
+            if i < x:
+                str = str + i
+            else:
+                str = str + x
+                break
+        return len(str) - 1
+        
+    elif type(seq) == set:
+        set = set()
+        for i in seq:
+            if i < x:
+                set.add(i)
+            else:
+                set.add(x)
+                break
+        return len(set) - 1
+        
+    elif type(seq) == dict:
+        dict = {}
+        for i in seq:
+            if i < x:
+                dict[i] = seq[i]
+            else:
+                dict[x] = seq[x]
+                break
+        return len(dict) - 1
+        
+    elif type(seq) == frozenset:
+        frozenset = frozenset()
+        for i in seq:
+            if i < x:
+                frozenset.add(i)
+            else:
+                frozenset.add(x)
+                break
+        return len(frozenset) - 1
+        
+    elif type(seq) == range:
+        range = range(0,0)
+        for i in seq:
+            if i < x:
+                range = range(i,x)
+            else:
+                range = range(x,x)
+                break
+        return len(range) - 1
+        
+    elif type(seq) == bytearray:
+        bytearray = bytearray()
+        for i in seq:
+            if i < x:
+                bytearray.append(i)
+            else:
+                bytearray.append(x)
+                break
+        return len(bytearray) - 1
+        
+    elif type(seq) == memoryview:
+        memoryview = memoryview(bytearray())
+        for i in seq:
+            if i < x:
+                memoryview.append(i)
+            else:
+                memoryview.append(x)
+                break
+        return len(memoryview) - 1
+        
+    elif

@@ -1,0 +1,8 @@
+#'Return a fixed version of the following code.The problem is Sequential Search:
+def search(x, seq):
+    if type(seq) == tuple:
+        for i in range(len(seq)):
+            if x <= seq[i]:
+                seq = seq[:i] + (x,) + seq[i:]
+            elif seq[len(seq)-1] < x:
+                seq = seq + (x,)
