@@ -1,0 +1,7 @@
+def top_k(lst, k):
+    new_lst = []
+    for _ in range(k):
+        greatest = max(lst)
+        new_lst.append(greatest)
+        lst.remove(greatest)
+    return new_lst

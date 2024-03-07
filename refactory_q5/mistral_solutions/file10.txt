@@ -1,0 +1,7 @@
+def top_k(lst, k):
+    n = len(lst) - k
+    sort_list = []
+    while len(sort_list) < k and lst:
+        sort_list.append(max(lst))
+        lst.remove(max(lst))
+    return sort_list[:-n]

@@ -1,0 +1,6 @@
+def top_k(lst, k):
+ if len(lst) < k:
+ return lst # if the length of the input list is less than k, return the entire list
+
+ lst.sort(reverse=True) # sort the input list in descending order
+ return lst[:k] # return the first k elements of the sorted list

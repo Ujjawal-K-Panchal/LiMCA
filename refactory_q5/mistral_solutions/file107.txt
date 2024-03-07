@@ -1,0 +1,8 @@
+def top_k(lst, k):
+
+    newlst = []
+    for i in range(k):
+        newlst.append(max(lst))
+        lst = [elem for elem in lst if elem != max(lst)]
+
+    return newlst

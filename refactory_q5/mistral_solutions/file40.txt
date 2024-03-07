@@ -1,0 +1,11 @@
+def top_k(lst, k):
+    if len(lst) > k:
+        for i in range(len(lst) - 1):
+            j = i + 1
+            while j < len(lst) and lst[i] > lst[j]:
+                j += 1
+            if j < len(lst):
+                lst[i], lst[j] = lst[j], lst[i]
+        return lst[:k]
+    else:
+        return lst

@@ -1,0 +1,8 @@
+def top_k(lst, k):
+    arranged = []
+    while k > 0:
+        maximum = max(lst)
+        lst.remove(maximum)
+        arranged.append(maximum)
+        k -= 1
+    return arranged

@@ -1,0 +1,7 @@
+def top_k(lst, k):
+heapq = [] if type(lst) is not list else [] # check if input is list and initialize heapq if needed
+for element in lst:
+heappush(heapq, element) # add elements to heapq in log(n) time
+if len(heapq) > k: # if length of heapq is greater than k, pop smallest elements until desired length is reached
+heappop(heapq)
+return heapq[:k]

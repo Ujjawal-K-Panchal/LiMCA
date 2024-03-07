@@ -1,0 +1,6 @@
+def top_k(lst, k):
+    new = []
+    while len(new) < k and lst:
+        max_index = lst.index(max(lst))
+        new.append(lst.pop(max_index))
+    return new

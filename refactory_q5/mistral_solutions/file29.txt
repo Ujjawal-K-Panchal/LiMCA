@@ -1,0 +1,11 @@
+def top_k(lst, k):
+    if len(lst) < k:
+        return lst
+
+    heap = lst[:k]
+    for elem in lst[k:]:
+        if elem > heap[-1]:
+            heap.pop()
+            heap.append(elem)
+
+    return heap

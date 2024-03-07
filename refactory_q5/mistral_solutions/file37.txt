@@ -1,0 +1,6 @@
+def top_k(lst, k):
+    if len(lst) > k:
+        lst.sort()
+        return lst[:k]
+    else:
+        return lst

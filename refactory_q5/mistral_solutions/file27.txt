@@ -1,0 +1,10 @@
+def top_k(lst, k):
+    sorted_lst = lst[:]
+    while len(sorted_lst) > k:
+        largest = sorted_lst[0]
+        for element in sorted_lst[1:]:
+            if element > largest:
+                largest = element
+        sorted_lst.pop(0)
+        sorted_lst.append(largest)
+    return sorted_lst[:k]

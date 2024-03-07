@@ -1,0 +1,11 @@
+def top_k(lst, k):
+    values = []
+    greatest = lst[0]
+    while len(values) < k:
+        for item in lst:
+            if item > greatest:
+                greatest = item
+        values.append(greatest)
+        lst.remove(greatest) # remove the greatest element from the input list
+        greatest = lst[0] or lst[0:1][0] # update greatest with the new greatest element
+    return values

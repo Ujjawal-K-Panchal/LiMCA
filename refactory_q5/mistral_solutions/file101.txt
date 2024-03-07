@@ -1,0 +1,9 @@
+def top_k(lst, k):
+    # Fill in your code here
+    import heapq
+    heap = [(elem, i) for i, elem in enumerate(lst)]
+    heapq.heapify(heap)
+    result = []
+    for i in range(k):
+        result.append(heapq.heappop(heap)[0])
+    return result

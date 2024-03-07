@@ -1,0 +1,13 @@
+def top_k(lst, k):
+    if len(lst) > k:
+        i = 0
+        j = 0
+        while i < len(lst) and j < k:
+            if lst[i] > lst[j]:
+                j += 1
+                continue
+            lst[i], lst[j] = lst[j], lst[i]
+            i += 1
+        return lst[:k]
+    else:
+        return lst

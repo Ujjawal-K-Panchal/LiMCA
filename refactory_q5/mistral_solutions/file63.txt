@@ -1,0 +1,8 @@
+def top_k(lst, k):
+    if k <= 0:
+        return []
+    else:
+        max_index = lst.index(max(lst))
+        new_lst = lst.copy()
+        new_lst.pop(max_index)
+        return [lst[max_index]] + top_k(new_lst, k - 1)

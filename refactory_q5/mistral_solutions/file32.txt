@@ -1,0 +1,10 @@
+def top_k(lst, k):
+    if len(lst) < k:
+        return lst
+
+    result = []
+    while lst and len(result) < k:
+        largest = max(lst)
+        result.append(lst.remove(lst.index(largest)))
+
+    return result

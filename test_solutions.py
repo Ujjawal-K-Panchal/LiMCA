@@ -23,7 +23,7 @@ if __name__ == "__main__":
     prompt=base_prompt + refactory_problems[int(problem_number)-1]
     directory_name = "refactory_q"+str(problem_number)+"/"+llm_list[int(llm_number)-1]+"_sol_iter"+str(iteration)
 
-    function_definition_folder = "refactory_q1/GPT_sol_iter_1"
+    function_definition_folder = "refactory_q5/gpt_solutions"
     function_defs = []
     for filename in os.listdir(function_definition_folder):
         file_path = os.path.join(function_definition_folder, filename)
@@ -32,12 +32,14 @@ if __name__ == "__main__":
 
 
     # Get function calls from a folder
-    function_call_folder = "refactory_q1/q1_inputs"
+    function_call_folder = "refactory_q5/wrong_files"
     function_calls = []
     for filename in sorted(os.listdir(function_call_folder)):
         file_path = os.path.join(function_call_folder, filename)
         if os.path.isfile(file_path):
             function_calls.append(read_file(file_path))
+
+
 
     # Get expected results from another folder
     expected_results_folder = "refactory_q1/q1_outputs"

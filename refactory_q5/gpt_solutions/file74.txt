@@ -1,0 +1,11 @@
+def top_k(lst, k):
+    results = []
+    counter = 0
+    while counter < k:
+        max_value = max(lst)
+        for i in range(len(lst)):
+            if lst[i] == max_value:
+                results.append(lst.pop(i))
+                counter += 1
+                break
+    return results

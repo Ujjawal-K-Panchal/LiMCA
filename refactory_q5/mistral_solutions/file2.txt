@@ -1,0 +1,11 @@
+def top_k(lst, k):
+    lst_res = lst
+    sort = []
+    while len(lst_res) > 0 and len(sort) < k:
+        largest = lst_res[0]
+        for element in lst_res:
+            if element > largest:
+                largest = element
+        sort.append(largest)
+        lst_res.remove(largest)
+    return sort
