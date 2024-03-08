@@ -1,0 +1,8 @@
+def search(x, seq):
+    lst = list(seq)
+    for i in range(len(lst)):
+        if x <= lst[i]:
+            lst.insert(i, x)
+            return i
+    lst.insert(len(lst), x)
+    return len(lst) - 1
