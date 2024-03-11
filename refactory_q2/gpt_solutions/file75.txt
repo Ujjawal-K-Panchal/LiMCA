@@ -1,0 +1,27 @@
+def map(fn, seq):
+    res = []  # Use a list instead of a tuple
+
+    for ele in seq:
+        res.append(fn(ele))
+    return res
+
+def unique_day(day, possible_birthdays):
+    days = [x[1] for x in possible_birthdays]  # Use list comprehension
+    return days.count(day) == 1
+
+def unique_month(month, possible_birthdays):
+    months = [x[0] for x in possible_birthdays]  # Use list comprehension
+    return months.count(month) == 1
+
+def filter(pred, seq):
+    res = []  # Use a list instead of a tuple
+
+    for ele in seq:
+        if pred(ele):
+            res.append(ele)
+    return res
+
+def contains_unique_day(month, possible_birthdays):
+    relevant_dates = [x for x in possible_birthdays if x[0] == month]  # Use list comprehension
+    days = [x[1] for x in relevant_dates]  # Use list comprehension
+    return any(unique_day(day, possible_birthdays) for day in days)  # Use generator expression
