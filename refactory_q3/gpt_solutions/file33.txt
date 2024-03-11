@@ -1,0 +1,5 @@
+def remove_extras(lst):
+    # your code here
+    occurrences = set()
+    new_lst = [item for item in lst if item not in occurrences]
+    return list(occurrences) + new_lst

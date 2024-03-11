@@ -1,0 +1,11 @@
+def remove_extras(lst):
+    i = 0
+    while i < len(lst):  # Changed 'for' loop to 'while' loop as we are modifying list while iterating
+        j = i + 1
+        while j < len(lst):  # Changed 'for' loop to 'while' loop as we are modifying list while iterating
+            if lst[i] == lst[j]:
+                lst = lst[:j] + lst[j+1:]
+            else:
+                j += 1  # Added increment only in else clause, because list size changes when an element is removed
+        i += 1
+    return lst

@@ -1,0 +1,8 @@
+def remove_extras(lst):
+    lst1 = lst.copy()  # Changed from 'lst.reverse' to 'lst.copy()' as 'reverse' is a method not an attribute
+    for i in lst1:  
+        if lst1.count(i) > 1:
+            for _ in range(lst1.count(i)-1):  # Changed from "lst1.remove(i) * (i-1)" to for loop to remove the element multiple times
+                lst1.remove(i)  
+    lst1.reverse()  # Changed from 'lst1.reverse' to 'lst1.reverse()' as 'reverse' is a method not an attribute
+    return lst1

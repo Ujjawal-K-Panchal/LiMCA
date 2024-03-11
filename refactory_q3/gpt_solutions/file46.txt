@@ -1,0 +1,10 @@
+def remove_extras(lst):
+    lst.reverse()
+    for i in set(lst):  # Changed 'lst' to 'set(lst)' to avoid modifying list while iterating over it
+        if lst.count(i) > 1:
+            j = 0
+            while j < lst.count(i) - 1:  # Changed 'i' to 'lst.count(i) - 1' to remove duplicates
+                lst.remove(i)
+                j += 1
+    lst.reverse()
+    return lst

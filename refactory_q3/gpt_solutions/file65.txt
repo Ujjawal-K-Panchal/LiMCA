@@ -1,0 +1,8 @@
+def remove_extras(lst):
+    if not lst:  # Added to handle empty list scenario
+        return []
+    result = [lst[0]]
+    for i in range(1, len(lst)):  # Removed unnecessary variable length
+        if lst[i] not in result:
+            result.append(lst[i])  # Changed to append method for better performance
+    return result
